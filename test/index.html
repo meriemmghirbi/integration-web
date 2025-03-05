@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportWatchHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="bg-gray-100 text-dark font-sans">
+
+    <!-- ✅ HEADER -->
+    <header class="bg-primary text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">SPORTWATCH</h1>
+            <nav class="flex items-center space-x-6">
+              <div class="relative group">
+                  <a href="index.html" class="text-white hover:text-teal-200 flex items-center transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                      Accueil
+                      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </a>
+              </div>
+  
+              <div class="relative group">
+                  <a href="#" class="text-white hover:text-teal-200 flex items-center transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      Contact
+                      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </a>
+              </div>
+  
+              <div class="relative group">
+                  <a href="#" class="text-white hover:text-teal-200 flex items-center transition duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      S'inscrire
+                      <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </a>
+              </div>
+          </nav>
+  
+        </div>
+    </header>
+
+    <!-- ✅ BANNIÈRE -->
+    <div class="flex justify-center items-center">
+      <p class="text-lg font-bold text-white bg-gradient-to-r from-blue-500 via-teal-400 to-blue-500 
+                animate-pulse px-6 py-3 rounded-lg shadow-lg tracking-wide uppercase text-center">
+          🚀 Nous offrons une livraison rapide et sécurisée !  
+      </p>
+  </div>
+  
+
+
+    <!-- ✅ CONTENU PRINCIPAL -->
+    <main class="container mx-auto my-8 p-4">
+        <h2 class="text-2xl font-bold">📌 Liste des produits</h2>
+
+        <div class="grid grid-cols-4 gap-4 mt-6">
+            <!-- Exemples de montres -->
+            <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition">
+                <img src="image/montre1.jpg" alt="Montre 1" class="w-full">
+                <h3 class="text-lg font-bold mt-2">Montre 1</h3>
+                <p class="text-secondary">100€</p>
+                <button class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                  <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9.879 0a9 9 0 0117.758 0 9 9 0 01-17.758 0z" />
+                  </svg>
+                  <span>Voir détail</span>
+              </button>
+              
+                          </div>
+
+            <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition">
+                <img src="image/montre2.jpg" alt="Montre 2" class="w-full">
+                <h3 class="text-lg font-bold mt-2">Montre 2</h3>
+                <p class="text-secondary">100€</p>
+                <a href="detail-produit.html" class="inline-block">
+                  <button class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                      <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9.879 0a9 9 0 0117.758 0 9 9 0 01-17.758 0z" />
+                      </svg>
+                      <span>Voir détail</span>
+                  </button>
+              </a>
+              
+              
+                          </div>
+
+            <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition">
+                <img src="image/montre3.jpg" alt="Montre 3" class="w-full">
+                <h3 class="text-lg font-bold mt-2">Montre 3</h3>
+                <p class="text-secondary">100€</p>
+                <a href="detail-produit.html" class="inline-block">
+                  <a href="detail-produit.html" class="inline-block">
+                    <button class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9.879 0a9 9 0 0117.758 0 9 9 0 01-17.758 0z" />
+                        </svg>
+                        <span>Voir détail</span>
+                    </button>
+                </a>
+                
+              </a>
+              
+              
+                          </div>
+            <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition">
+              <img src="image/montre4.jpg" alt="Montre 4" class="w-full">
+              <h3 class="text-lg font-bold mt-2">Montre 4</h3>
+              <p class="text-secondary">100€</p>
+              <a href="detail-produit.html" class="inline-block">
+                <button class="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                    <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9.879 0a9 9 0 0117.758 0 9 9 0 01-17.758 0z" />
+                    </svg>
+                    <span>Voir détail</span>
+                </button>
+            </a>
+            
+            
+                      </div>
+          
+        </div>
+    </main>
+
+    <!-- ✅ PAGINATION -->
+    <div class="flex justify-center mt-8">
+        <ul class="flex space-x-2">
+            <li class="px-3 py-1 bg-primary text-white rounded">1</li>
+            <li class="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer">2</li>
+            <li class="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer">3</li>
+            <li class="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer">...</li>
+            <li class="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400 cursor-pointer">68</li>
+        </ul>
+    </div>
+
+    <!-- ✅ FOOTER -->
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-teal-600 to-teal-700 text-white py-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4 border-b border-teal-500 pb-2">SportWatchHub</h3>
+                <p class="mb-2">S'inscrire à notre newsletter</p>
+                <div class="flex">
+                    <input type="email" placeholder="Votre email" class="p-2 rounded-l w-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-teal-300">
+                    <button class="bg-teal-800 text-white px-4 rounded-r hover:bg-teal-900 transition duration-300">
+                        OK
+                    </button>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4 border-b border-teal-500 pb-2">Support</h3>
+                <p class="mb-1">10 Rue Saint Augustin</p>
+                <p class="mb-1">1002 Tunis</p>
+                <p class="mb-1">contact@sportwatchhub.com</p>
+                <p>+216 31 31 00 00</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4 border-b border-teal-500 pb-2">Compte</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="hover:text-teal-200 transition duration-300">Votre compte</a></li>
+                    <li><a href="#" class="hover:text-teal-200 transition duration-300">Commandes</a></li>
+                    <li><a href="#" class="hover:text-teal-200 transition duration-300">Shop</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4 border-b border-teal-500 pb-2">Suivez-nous</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-teal-200 transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-teal-200 transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.5 8.778c-.441.196-.916.328-1.414.388a2.465 2.465 0 001.079-1.364 4.931 4.931 0 01-1.563.597 2.461 2.461 0 00-4.2 2.246A6.987 6.987 0 016.25 7.437a2.464 2.464 0 00.762 3.285 2.447 2.447 0 01-1.114-.308v.031a2.46 2.46 0 001.972 2.412 2.475 2.475 0 01-1.112.042 2.462 2.462 0 002.297 1.71A4.94 4.94 0 015.5 15.311 6.967 6.967 0 009.89 16.6c4.734 0 7.322-3.927 7.322-7.322 0-.111-.002-.222-.007-.332A5.25 5.25 0 0018.5 8.778z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-teal-200 transition duration-300">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.78-2.618 6.98-6.98C23.986 15.667 24 15.259 24 12c0-3.259-.014-3.668-.072-4.948-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8 pt-4 border-t border-teal-500">
+            <p class="text-sm">&copy; 2025 SportWatchHub. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

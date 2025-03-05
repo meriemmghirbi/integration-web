@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* 📌 Utilisation :
+.container {
+  @include responsive(mobile) {
+    width: 100%;
+  }
+} 
+*/
+/* 📌 Utilisation :
+.btn {
+  @include button;
+}
+.btn-secondary {
+  @include button($secondary-color, $black);
+}
+*/
+
+.card {
+  @include card-style;
+}
+
+/* 📌 Utilisation :
+.appear {
+  @include fade-in(0.8s);
+}
+*/
+/* 📌 Utilisation :
+nav a {
+  @include menu-hover;
+}
+*/
+/* 📌 Utilisation :
+img {
+  @include image-responsive;
+}
+*/
+/* 📌 Utilisation :
+.btn-float {
+  @include floating-button;
+}
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: #008080;
+  color: white;
+  padding: 20px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: #ff9800;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: rgb(204, 121.6, 0);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,181 @@
+// =============================
+// 📌 Mixins SCSS pour un style réutilisable
+// =============================
+
+// 🔷 Variables Globales
+$primary-color: #008080;
+$secondary-color: #f8b400;
+$light-gray: #f5f5f5;
+$dark-gray: #333;
+$white: #fff;
+$black: #000;
+
+// =============================
+// 🔹 Mixin : Breakpoints Responsive
+// =============================
+@mixin responsive($size) {
+  @if $size == mobile {
+    @media (max-width: 640px) { @content; }
+  }
+  @else if $size == tablet {
+    @media (max-width: 1024px) { @content; }
+  }
+  @else if $size == desktop {
+    @media (min-width: 1025px) { @content; }
+  }
+}
+
+/* 📌 Utilisation :
+.container {
+  @include responsive(mobile) {
+    width: 100%;
+  }
+} 
+*/
+
+// =============================
+// 🔹 Mixin : Bouton Stylisé
+// =============================
+@mixin button($bg-color: $primary-color, $text-color: $white) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+/* 📌 Utilisation :
+.btn {
+  @include button;
+}
+.btn-secondary {
+  @include button($secondary-color, $black);
+}
+*/
+
+// =============================
+// 🔹 Mixin : Carte Produit
+// =============================
+@mixin card-style {
+  background-color: $white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* 📌 Utilisation :
+.card {
+  @include card-style;
+}
+*/
+
+// =============================
+// 🔹 Mixin : Animation d’apparition (Fade-in)
+// =============================
+@mixin fade-in($duration: 0.5s) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInAnimation $duration ease-in-out forwards;
+
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 📌 Utilisation :
+.appear {
+  @include fade-in(0.8s);
+}
+*/
+
+// =============================
+// 🔹 Mixin : Effet hover sur les liens du menu
+// =============================
+@mixin menu-hover($color: $primary-color) {
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $color;
+  }
+}
+
+/* 📌 Utilisation :
+nav a {
+  @include menu-hover;
+}
+*/
+
+// =============================
+// 🔹 Mixin : Images Responsives
+// =============================
+@mixin image-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+img {
+  @include image-responsive;
+}
+
+
+// =============================
+// 🔹 Mixin : Bouton Flottant
+// =============================
+@mixin floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $primary-color;
+  color: $white;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: scale(1.1);
+  }
+}
+
+
+.btn-float {
+  @include floating-button;
+}
+
+@mixin card-style {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product {
+  @include card-style;
+  text-align: center;
+}

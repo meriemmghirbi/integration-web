@@ -1,0 +1,147 @@
+@import "variable";
+@import "mixins";
+
+// Import Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import FontAwesome pour les icônes
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  text-align: center;
+  background: $primary-color;
+  color: white;
+  padding: 20px;
+}
+
+/* ================= SECTION DÉTAIL PRODUIT ================= */
+.detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* ---- Colonne gauche : Images produit ---- */
+.detail-images {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-images img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Colonne droite : Détails produit ---- */
+.detail-info {
+  flex: 2;
+  min-width: 300px;
+}
+
+.detail-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.detail-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Disponibilité */
+.availability {
+  font-weight: bold;
+  color: green;
+}
+
+/* Prix */
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Quantité */
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity button {
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.quantity button:hover {
+  background: darken($primary-color, 10%);
+}
+
+/* ================= BOUTONS ================= */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: $button-color;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: darken($button-color, 10%);
+}
+
+.btn i {
+  font-size: 18px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #002233;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Liens footer */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
