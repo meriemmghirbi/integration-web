@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportWatchHub - Panier</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Top Section with Phrase -->
+    <div class="bg-[#137C8B] text-white py-2 text-center">
+        <p class="text-sm">Nous offrons une livraison rapide et sécurisée directement à votre porte, avec un suivi en temps réel de votre commande.</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Logo" class="w-16 h-16"> <!-- Logo image -->
+                    <span class="text-2xl font-bold text-gray-800 ml-2">SPORTWATCH</span>
+                </div>
+                <!-- Navigation Links and Icons -->
+                <div class="flex items-center space-x-6">
+                    <!-- Search Bar -->
+                    <div class="relative">
+                        <input type="text" class="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" placeholder="What are you looking for?">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <!-- Icons -->
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-user text-xl"></i> <!-- Account Icon -->
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-shopping-cart text-xl"></i> <!-- Cart Icon -->
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900">
+                            <i class="fas fa-clock text-xl"></i> <!-- Watch Icon -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Breadcrumb -->
+        <div class="text-sm text-gray-600 mb-4">
+            <a href="#" class="hover:text-gray-900">Accueil</a> / <span class="font-semibold">Panier</span>
+        </div>
+
+        <!-- Panier Section -->
+        <div class="bg-white p-6 rounded-lg shadow">
+            <h1 class="text-2xl font-bold mb-4">Panier</h1>
+
+            <!-- Product Table -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="col-span-2">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-left py-2">Produit</th>
+                                <th class="text-left py-2">Prix (DT)</th>
+                                <th class="text-left py-2">Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Product 1 -->
+                            <tr class="border-b">
+                                <td class="py-4 flex items-center">
+                                    <img src="images/garmin1jpg.jpg" alt="Montre 1" class="w-16 h-16 object-cover rounded-md"> <!-- Product 1 image -->
+                                    <span class="ml-4">Montre</span>
+                                </td>
+                                <td class="py-4">650dt</td>
+                                <td class="py-4">01</td>
+                            </tr>
+                            <!-- Product 2 -->
+                            <tr class="border-b">
+                                <td class="py-4 flex items-center">
+                                    <img src="images/gamin2.jpg" alt="Montre 2" class="w-16 h-16 object-cover rounded-md"> <!-- Product 2 image -->
+                                    <span class="ml-4">Montre</span>
+                                </td>
+                                <td class="py-4">550dt</td>
+                                <td class="py-4">02</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Buttons -->
+                    <div class="flex justify-between mt-6">
+                        <button class="bg-gray-300 text-gray-700 px-6 py-2 rounded-md hover:bg-gray-400">Continuer l’achat</button>
+                        <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Mettre à jour</button>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h2 class="text-xl font-bold mb-4">Sommaire</h2>
+                    <div class="flex justify-between mb-4">
+                        <span class="text-gray-600">Total :</span>
+                        <span class="font-bold">1750dt</span>
+                    </div>
+                    <button class="bg-blue-600 text-white w-full py-2 rounded-md hover:bg-blue-700">Passer à la caisse</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#137C8B] text-white mt-8">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- S’inscrire Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">S’inscrire</h3>
+                    <p class="text-gray-200 mb-4">Rejoignez nous</p>
+                    <div class="flex">
+                        <input type="email" class="border border-gray-400 rounded-l-md p-2 w-full bg-[#137C8B] text-white placeholder-gray-300" placeholder="Enter your email">
+                        <button class="bg-blue-600 text-white px-4 rounded-r-md hover:bg-blue-700">Submit</button>
+                    </div>
+                </div>
+
+                <!-- Support Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Support</h3>
+                    <p class="text-gray-200">10 Rue Saint Augustin</p>
+                    <p class="text-gray-200">1002 Tunis</p>
+                    <p class="text-gray-200">contact@sportwatchhub.com</p>
+                    <p class="text-gray-200">+216 31 31 00 00</p>
+                </div>
+
+                <!-- Compte Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Compte</h3>
+                    <ul class="text-gray-200">
+                        <li><a href="#" class="hover:text-white">Votre compte</a></li>
+                        <li><a href="#" class="hover:text-white">Commande</a></li>
+                        <li><a href="#" class="hover:text-white">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations légales Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Informations légales</h3>
+                    <ul class="text-gray-200">
+                        <li><a href="#" class="hover:text-white">Conditions générales d'utilisation</a></li>
+                        <li><a href="#" class="hover:text-white">Livraison</a></li>
+                        <li><a href="#" class="hover:text-white">Paiement sécurisé</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="#" class="text-gray-200 hover:text-white">
+                    <i class="fab fa-twitter"></
