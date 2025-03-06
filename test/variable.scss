@@ -1,3 +1,19 @@
+// Colors
 $primary-color: #007b8f;
-$button-color: #ff9800;
+$primary-hover: darken($primary-color, 10%);
+$background-color: #f8f9fa;
 $text-color: #333;
+$secondary-text: #555;
+$light-gray: #d1fae5;
+
+// Typography
+$font-primary: 'Inter', sans-serif;
+$font-mono: 'Courier New', monospace;
+
+// Spacing
+$spacing: 20px;
+
+// Breakpoints
+$mobile: 640px;
+$tablet: 1024px;
+$desktop: 1025px;

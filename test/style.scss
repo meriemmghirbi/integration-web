@@ -1,147 +1,123 @@
 @import "variable";
 @import "mixins";
 
-// Import Tailwind
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-// Import FontAwesome pour les icônes
-@import '@fortawesome/fontawesome-free/css/all.min.css';
-
+// Base styles
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
+  font-family: $font-primary;
+  background-color: $background-color;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
-/* ================= HEADER ================= */
-header {
+// Header
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing;
+
+  .container {
+    @include flex-between;
+  }
+
+  nav {
+    display: flex;
+    gap: $spacing;
+
+    a {
+      @include menu-hover;
+      color: white;
+    }
+  }
+}
+
+// Timer
+.timer {
+  @include card-style;
   text-align: center;
-  background: $primary-color;
+  margin-bottom: 40px;
+
+  &-labels {
+    display: flex;
+    justify-content: center;
+    gap: $spacing;
+    font-size: 14px;
+    color: $secondary-text;
+  }
+
+  &-display {
+    font-size: 48px;
+    font-weight: bold;
+    color: $primary-color;
+    font-family: $font-mono;
+  }
+}
+
+// Products
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing;
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product {
+  @include card-style;
+  @include fade-in(0.3s);
+
+  .discount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing;
+  }
+
+  .discount-label {
+    background-color: $light-gray;
+    color: $primary-color;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+
+  .product-img {
+    @include image-responsive;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    @include button;
+  }
+}
+
+// Footer
+.footer {
+  background: linear-gradient(to right, $primary-color, darken($primary-color, 10%));
   color: white;
-  padding: 20px;
-}
+  padding: $spacing * 3;
 
-/* ================= SECTION DÉTAIL PRODUIT ================= */
-.detail-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  gap: 30px;
-}
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing * 2;
 
-/* ---- Colonne gauche : Images produit ---- */
-.detail-images {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
 
-.detail-images img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
 
-/* ---- Colonne droite : Détails produit ---- */
-.detail-info {
-  flex: 2;
-  min-width: 300px;
-}
-
-.detail-info h1 {
-  font-size: 24px;
-  font-weight: bold;
-  color: $primary-color;
-}
-
-.detail-info p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-/* Disponibilité */
-.availability {
-  font-weight: bold;
-  color: green;
-}
-
-/* Prix */
-.price {
-  font-size: 22px;
-  font-weight: bold;
-  color: #222;
-}
-
-/* Quantité */
-.quantity {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.quantity button {
-  background: $primary-color;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.quantity button:hover {
-  background: darken($primary-color, 10%);
-}
-
-/* ================= BOUTONS ================= */
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: $button-color;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: darken($button-color, 10%);
-}
-
-.btn i {
-  font-size: 18px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background: #002233;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-}
-
-/* Liens footer */
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+    input {
+      flex: 1;
+      padding: 8px;
+      border-radius: 4px;
+    }
+  }
 }
