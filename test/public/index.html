@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportWatchHub - Livraison</title>
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  
+  <!-- HEADER -->
+  <header class="bg-teal-600 text-white text-center p-2 text-sm">
+    Nous offrons une livraison rapide et sécurisée directement à votre porte, avec un suivi en temps réel de votre commande
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center p-4 bg-white shadow relative">
+    <!-- Logo -->
+    <div class="text-lg font-bold">SportWatchHub</div>
+    
+    <!-- Liens centrés -->
+    <div class="flex space-x-6 text-lg font-medium absolute left-1/2 transform -translate-x-1/2">
+      <a href="#">Accueil</a>
+      <a href="#">Contact</a>
+      <a href="#">S'inscrire</a>
+    </div>
+
+    <!-- Barre de recherche et icônes -->
+    <div class="flex space-x-4 items-center">
+      <input type="text" placeholder="Que cherchez-vous ?" class="border p-1 rounded">
+      <div class="flex space-x-2">
+        <span>🛒</span>
+        <span>👤</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-6xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Informations Personnelles -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Informations personnelles</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nom" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Prénom" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Adresse" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Région" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Ville" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Code Postal" class="w-full p-2 border rounded">
+        <input type="text" placeholder="Numéro de téléphone" class="w-full p-2 border rounded">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" class="accent-teal-600">
+          <span>Enregistrez ces informations pour un paiement plus rapide la prochaine fois</span>
+        </label>
+      </form>
+    </section>
+
+    <!-- Récapitulatif de la commande -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">Récapitulatif de la commande</h2>
+      <div class="space-y-6">
+        <div class="flex items-center space-x-4">
+          <img src="images/garmin-sw.png" alt="Garmin Smartwatch" class="w-24 h-24 object-cover">
+          <div>Garmin sw<br>Qté : 2</div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <img src="images/rolex-watch.png" alt="Rolex watch" class="w-24 h-24 object-cover">
+          <div>Rolex watch<br>Qté : 2</div>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold my-6">Mode de livraison</h2>
+      <div class="space-y-2">
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="livraison" class="accent-teal-600">
+          <span>Livraison à domicile - 8.000 DT</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="livraison" class="accent-teal-600">
+          <span>Allée privée - Gratuit</span>
+        </label>
+        <label class="flex items-center space-x-2">
+          <input type="radio" name="livraison" checked class="accent-teal-600">
+          <span>Retrait en magasin</span>
+        </label>
+      </div>
+
+      <button class="mt-6 w-full bg-[#7A90A4] text-white p-3 rounded">Passer au paiement</button>
+    </section>
+  </main>
+
+  <!-- FOOTER (même couleur que HEADER) -->
+  <footer class="bg-teal-600 text-white p-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold">SportWatchHub</h3>
+        <p>Rejoignez-nous</p>
+        <input type="email" placeholder="Entrez votre email" class="w-full p-2 mt-2 rounded text-black">
+      </div>
+      <div>
+        <h3 class="font-bold">Support</h3>
+        <p>10 Rue Saint Augustin, 1002 Tunis</p>
+        <p>contact@sportwatchhub.com</p>
+        <p>+216 31 31 00 00</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Compte</h3>
+        <p>Votre compte</p>
+        <p>Commande</p>
+        <p>Shop</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Informations légales</h3>
+        <p>Conditions générales d'utilisation</p>
+        <p>Livraison</p>
+        <p>Paiement sécurisé</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

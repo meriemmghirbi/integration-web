@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportWatchHub - Accueil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Cacher la barre de scroll */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  
+  <!-- HEADER -->
+  <header class="bg-teal-600 text-white text-center p-2 text-sm">
+    Nous offrons une livraison rapide et sécurisée directement à votre porte, avec un suivi en temps réel de votre commande
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center p-4 bg-white shadow relative">
+    <div class="text-lg font-bold">SportWatchHub</div>
+    <div class="flex space-x-6 text-lg font-medium absolute left-1/2 transform -translate-x-1/2">
+      <a href="#">Accueil</a>
+      <a href="#">Contact</a>
+      <a href="#">S'inscrire</a>
+    </div>
+    <div class="flex space-x-4 items-center">
+      <input type="text" placeholder="Que cherchez-vous ?" class="border p-1 rounded">
+      <div class="flex space-x-2">
+        <span>🛒</span>
+        <span>👤</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NAVBAR VERTICALE -->
+  <div class="fixed left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg p-4 rounded-r-lg">
+    <ul class="space-y-4">
+      <li class="flex items-center space-x-2">
+        <span>➡️</span>
+        <a href="#" class="font-medium">Fidélité</a>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span>➡️</span>
+        <a href="#" class="font-medium">Recommandation</a>
+      </li>
+      <li class="flex items-center space-x-2">
+        <span>➡️</span>
+        <a href="#" class="font-medium">Nos produits</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- BANNER -->
+  <section class="w-full h-64 bg-cover bg-center flex items-center justify-center" style="background-image: url('images/banner.png');">
+    <img src="images/nouveautes.png" alt="Nouveautés" class="w-full max-w-[350px] h-auto max-h-[390px] object-contain">
+  </section>
+
+  <!-- Texte En Promo -->
+  <div class="text-center text-xl font-bold text-red-600 mt-4">
+    🔥 En Promo 🔥
+  </div>
+
+  <!-- SECTION NOS PRODUITS -->
+  <section class="max-w-6xl mx-auto py-10 px-4 text-center">
+    <h2 class="text-2xl font-bold mb-6">Nos Produits</h2>
+
+    <div class="relative flex items-center justify-center">
+      <!-- Bouton gauche -->
+      <button id="prevBtn" class="absolute left-0 bg-gray-300 p-2 rounded-full shadow-md">
+        ←
+      </button>
+
+      <div id="carousel" class="flex space-x-6 overflow-x-auto hide-scrollbar scroll-smooth px-10">
+        <!-- Produit 1 -->
+        <div class="flex flex-col items-center min-w-[250px]">
+          <img src="images/chronolink.png" class="w-40 h-auto" alt="ChronoLink">
+          <p class="font-medium">ChronoLink</p>
+          <p class="text-red-500 font-bold">260TND <span class="line-through text-gray-500">360TND</span></p>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="flex flex-col items-center min-w-[250px]">
+          <img src="images/neotime.png" class="w-40 h-auto" alt="NeoTime">
+          <p class="font-medium">NeoTime</p>
+          <p class="font-bold">320TND</p>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="flex flex-col items-center min-w-[250px]">
+          <img src="images/vitawatch.png" class="w-40 h-auto" alt="VitaWatch">
+          <p class="font-medium">VitaWatch</p>
+          <p class="font-bold">190TND</p>
+        </div>
+      </div>
+
+      <!-- Bouton droit -->
+      <button id="nextBtn" class="absolute right-0 bg-gray-300 p-2 rounded-full shadow-md">
+        → 
+      </button>
+    </div>
+
+    <!-- Bouton Voir Produits -->
+    <button class="mt-6 px-6 py-2 bg-gray-600 text-white rounded-lg">
+      Voir Produits
+    </button>
+  </section>
+
+  <!-- SECTION CATEGORIES -->
+  <section class="max-w-6xl mx-auto py-10 px-4">
+    <h2 class="text-2xl font-bold text-center mb-6">Catégories</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+      <div>
+        <img src="images/smartwatch-category.png" class="w-40 h-auto mx-auto" alt="Smartwatch">
+        <p>Sport</p>
+      </div>
+      <div>
+        <img src="images/sportwatch-category.png" class="w-40 h-auto mx-auto" alt="Sport Watch">
+        <p>Chic</p>
+      </div>
+      <div>
+        <img src="images/accessory-category.png" class="w-40 h-auto mx-auto" alt="Accessories">
+        <p>Classique</p>
+      </div>
+    </div>
+    
+    <!-- Bouton Voir Plus -->
+    <div class="text-center mt-6">
+      <button class="px-6 py-2 bg-gray-600 text-white rounded-lg">Voir Plus</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-teal-600 text-white p-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="font-bold">SportWatchHub</h3>
+        <p>Rejoignez-nous</p>
+        <input type="email" placeholder="Entrez votre email" class="w-full p-2 mt-2 rounded text-black">
+      </div>
+      <div>
+        <h3 class="font-bold">Support</h3>
+        <p>10 Rue Saint Augustin, 1002 Tunis</p>
+        <p>contact@sportwatchhub.com</p>
+        <p>+216 31 31 00 00</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Compte</h3>
+        <p>Votre compte</p>
+        <p>Commande</p>
+        <p>Shop</p>
+      </div>
+      <div>
+        <h3 class="font-bold">Informations légales</h3>
+        <p>Conditions générales d'utilisation</p>
+        <p>Livraison</p>
+        <p>Paiement sécurisé</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+  
